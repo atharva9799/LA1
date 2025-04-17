@@ -1,0 +1,144 @@
+PRAC 1,2,3,4
+
+*Enter an r by c matrix M (r and c being positive integers)
+
+Code:
+rows=int(input("Enter the numbers of rows:"))
+column=int(input("Enter the number of columns:"))
+m=[]
+for i in range(rows):
+    m.append([])
+    for j in range(column):
+        e=int(input("Enter element:"))
+        m[i].append(e)
+ch=True
+while ch:
+    print("\n1.display matrix\n2.exit\n")
+    ch=int(input("Enter choice:"))
+    if ch==1:
+     for i in range(rows):
+         print(m[i])
+    elif ch==2:
+        print("Exit")
+        ch=False
+    else:
+        print("\nInvalid choice")
+---------------------------------------------------------------------------------------------
+* Write a program to display the rows and columns of the matrix M
+
+Code:
+
+rows=int(input("Enter the numbers of rows:"))
+column=int(input("Enter the number of columns:"))
+m=[]
+for i in range(rows):
+    m.append([])
+    for j in range(column):
+        e=int(input("Enter element:"))
+        m[i].append(e)
+def dis(m):
+ for i in range(rows):
+    print("row",[i])
+    print(m[i])
+ for i in range (len(m[0])):
+      print("column",[i])
+      for j in range(len(m)):
+          print("[",m[j][i],"]")
+ch=True
+while ch:
+    print("\n1.display matrix\n2.Display rows and columns\n3.Exit\n")
+    ch=int(input("Enter choice:"))
+    if ch==1:
+     for i in range(rows):
+
+ print(m[i])
+    elif ch==2:
+         dis(m)
+    elif ch==3:
+        print("Exit")
+        ch=False
+    else:
+        print("\nInvalid choice")
+-------------------------------------------------------------------------------------------
+
+Write a program to Find the scalar multiplication of M for a given scalar
+Code:
+rows=int(input("Enter number of rows:"))
+column=int(input("Enter numbersa of columns:"))
+m=[]
+for i in range(rows):
+    m.append([])
+    for j in range(column):
+        e=int(input("Enter element:"))
+        m[i].append(e)
+def scal(m):
+    a=int(input("Enter value of a:"))
+    unew=[]
+    for i in range(rows):
+        unew.append([])
+        for j in range(column):
+            unew[i].append([m[i][j]*a])
+    for i in range(rows):
+        print(unew[i])
+ch=True
+while ch:
+    print("\n1.Display matrix\n2.Scalar multiplication\n3.Exit\n")
+    ch=int(input("Enter Choice"))
+      
+
+
+
+    if ch==1:
+  for i in range(rows):
+            print(m[i])
+    elif ch==2:
+        scal(m)
+    elif ch==3:
+        print("Exit")
+        ch=False
+    else:
+        print("\nInvalid Choice")
+
+
+------------------------------------------------------------------------------------------------------
+        
+
+Write a program to Find the transpose of the matrix M
+Code:
+rows=int(input("Enter number of rows:"))
+column=int(input("Enter numbersa of columns:"))
+m=[]
+for i in range(rows):
+    m.append([])
+    for j in range(column):
+        e=int(input("Enter element:"))
+        m[i].append(e)
+def tran(m):
+    rmatrix=[]
+    rmatrix=[[0]*rows for i in range(column)];
+    for i in range(len(m)):
+        for j in range (len(m[0])):
+            rmatrix[j][i]=m[i][j]
+    for r in rmatrix:
+        print(r)
+ch=True
+while ch:
+    print("\n1.Display matrix\n2.Transpose of matrix\n3.Exit\n")
+    ch=int(input("Enter Choice"))
+    if ch==1:
+        for i in range(rows):
+           
+
+
+
+
+           print(m[i])
+    elif ch==2:
+        tran(m)
+    elif ch==3:
+        print("Exit")
+        ch=False
+    else:
+        print("\nInvalid Choice")
+------------------------------------------------------------------------------------------------
+
